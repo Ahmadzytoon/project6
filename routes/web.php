@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\rejectedController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Search;
 use App\Http\Controllers\User\ActivityDetailsController;
@@ -14,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\ActivityController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ReservationController;
 use App\Http\Controllers\ContactUsFormController;
 use App\Http\Controllers\User\MyreservController;
@@ -34,15 +36,19 @@ Route::get('/', function () {
     return view('admin.login');
 });
 
-Route::get('/dashboard', function () {
-    return view('admin.welcome');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('admin.dashboard');
+    
+// })->middleware(['auth', 'verified','admin'])->name('dashboard');
 
 // Route::middleware('auth')->group(function () {
 //     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
 //     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
+
+Route::get('/dashboard',[DashboardController::class , 'index'])->middleware(['auth', 'verified','admin'])->name('dashboard');
+
 Route::middleware(['auth','verified','admin'])->name('admin.')->prefix('admin')->group(function()
 {
 
@@ -50,8 +56,10 @@ Route::get('/',[AdminController::class,'index'])->name('index');
 Route::resource('/users',UserController::class);
 Route::resource('/activity',ActivityController::class);
 Route::resource('/reservation',ReservationController::class);
+
+
 });
-Route::get('/contact',[ContactUsFormController::class,'createForm'])->name('contact.createForm');
+Route::get('/contact',[ContactUsFormController::class,'createForm'])->name('contact.createForm')->middleware(['auth','verified','admin']);
 
 
 Route::get('/contact/store',[ContactUsFormController::class,'ContactUsForm'])->name('contact.store');
@@ -59,32 +67,15 @@ require __DIR__.'/auth.php';
 
 
 
-// Route::get('/contact', [ContactUsFormController::class, 'destroy'])->name('contact.destroy');
-// Route::get('/contact', [ContactUsFormController::class, 'createForm'])->name('contact.createForm');
 
-// Route::post('/contact', [ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
+Route::get('/contact/destroy/{id}', [ContactUsFormController::class, 'destroy'])->name('contact.destroy')->middleware(['auth','verified','admin']);
 
-// ________________________
-
-
-
-Route::get('/contact/destroy/{id}', [ContactUsFormController::class, 'destroy'])->name('contact.destroy');
+Route::get('/reservation/store', [rejectedController::class, 'store'])->name('reservation.store')->middleware(['auth','verified','admin']);
+Route::get('/reservation/{id}', [rejectedController::class, 'rejected'])->name('reservation.rejected')->middleware(['auth','verified','admin']);
 
 
 
-// Route::get('home', function () {
-//     return view('welcomeuser');
-// });
-// Route::get('about', function () {
-//     return view('about');
-// });
 
-// Route::get('book', function () {
-//     return view('book');
-// });
-// Route::get('single', function () {
-//     return view('single');
-// });
 
 // ________________________________________________
 Route::prefix('user')->name('user.')->group(function () {
@@ -112,10 +103,7 @@ Route::prefix('user')->name('user.')->group(function () {
     Route::get('/login/destroy',[LoginUserController::class,'destroy'])->name('login.destroy');
     
     Route::resource('/profile',ProfileUserController::class);
-    // Route::resource('/profile/edit',ProfileUserController::class);
-
-    
-    // Route::get('/search',[Search::class , 'search']);
+ 
 
     
     Route::get('/activity_details/{id}',[ActivityDetailsController::class,'index'])->name('activity.details');
@@ -127,7 +115,5 @@ Route::prefix('user')->name('user.')->group(function () {
     Route::resource('/myreserve',MyreservController::class);
     Route::get('/myreserve/update/{id}',[EditBookController::class,'update'])->name('edit.book');
     });
-// Route::get('/myResevation/edit', function () {
-//     return view('myResevation.edit');
-// });
+
 
