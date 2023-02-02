@@ -28,6 +28,8 @@ control panel
 
       {{-- Reservation --}}
       <div class="row">
+
+
         <div class="col-lg-3 col-6">
           <!-- small box -->
           <div class="small-box bg-info">
@@ -41,7 +43,11 @@ control panel
             </div>
             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
+        </div>
 
+
+
+        <div class="col-lg-3 col-6">
           <div class="small-box bg-info">
             <div class="inner">
               <h3>{{$todayReservation}}</h3>
@@ -53,7 +59,9 @@ control panel
             </div>
             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
+          </div>
 
+          <div class="col-lg-3 col-6">
           <div class="small-box bg-info">
             <div class="inner">
               <h3>{{$thisMonthReservation}}</h3>
@@ -65,7 +73,9 @@ control panel
             </div>
             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
+          </div>
 
+          <div class="col-lg-3 col-6">
           <div class="small-box bg-info">
             <div class="inner">
               <h3>{{$thisYearReservation}}</h3>
@@ -77,14 +87,14 @@ control panel
             </div>
             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
+          </div>
 
 
-        </div>
-
+      </div>
 
       
+      <div class="row">
         {{-- Activities --}}
-        <!-- ./col activity  -->
         <div class="col-lg-3 col-6">
           <!-- small box -->
           <div class="small-box bg-success">
@@ -100,33 +110,24 @@ control panel
             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
-         
-
-
-
-
-
-
-
-
         {{-- Users --}}
-        <!-- ./col -->
         <div class="col-lg-3 col-6">
 
-
-          <!-- small box -->
           <div class="small-box bg-warning">
             <div class="inner">
               <h3>{{ $totalAllUser }}</h3>
 
-              <p> Total All  Users </p>
+              <p>  Total All  Users </p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
-          <!-- small box -->
+        </div>
+
+          <div class="col-lg-3 col-6">
+
           <div class="small-box bg-warning">
             <div class="inner">
               <h3>{{ $totalUser }}</h3>
@@ -138,26 +139,9 @@ control panel
             </div>
             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
-          <!-- small box -->
-          <div class="small-box bg-warning">
-            <div class="inner">
-              <h3>{{ $totalAdmin }}</h3>
-
-              <p>  All  Admin </p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-person-add"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-          </div>
-
-
         </div>
-        <!-- ./col -->
 
-       
         {{-- Admin --}}
-        <!-- ./col -->
         <div class="col-lg-3 col-6">
           <!-- small box -->
           <div class="small-box bg-danger">
@@ -172,8 +156,9 @@ control panel
             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
-        </div>
-        <!-- ./col -->
+
+
+      </div>
 
 
 
