@@ -25,6 +25,7 @@
  
     .bg-dark{
       background-image: linear-gradient(180deg, #0e2a47,#04458f) !important;
+      background-size: cover !important;
     }
  </style>
 @endsection
