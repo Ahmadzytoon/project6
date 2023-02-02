@@ -24,13 +24,15 @@
 <!-- Template Stylesheet -->
 <link href="/UserSide/cssAbout/style.css" rel="stylesheet">
 <link href="/UserSide/csscontact/contact.css" rel="stylesheet">
+<link rel="stylesheet" href="/UserSide/mainstyle.css">
+
 <script src="https://kit.fontawesome.com/ccf160e1e6.js" crossorigin="anonymous"></script>
 <style>
    .hero-header{
 background-image:  linear-gradient(to bottom,#00142d,#00336db0,#ffffffcf ,#ffffff)  , url(/images/bookNow.png) !important;
-background-position: center center !important;
+/* background-position: center center !important; */
 background-repeat: no-repeat !important;
-background-size: cover !important;
+     background-size: cover !important;
    }
 
    .bg-dark{

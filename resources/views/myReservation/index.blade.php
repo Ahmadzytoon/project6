@@ -45,13 +45,20 @@
             <div class="row justify-content-center py-5">
                 <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
                     <h1 class="heading">
-                        <span>P</span>
-                        <span>r</span>
-                        <span>o</span>
-                        <span>f</span>
-                        <span>i</span>
-                        <span>l</span>
+                        <span>M</span>
+                        <span>y</span>
+                        <span class="space"></span>
+                        <span>R</span>
                         <span>e</span>
+                        <span>s</span>
+                        <span>e</span>
+                        <span>r</span>
+                        <span>v</span>
+                        <span>a</span>
+                        <span>t</span>
+                        <span>i</span>
+                        <span>o</span>
+                        <span>n</span>
                     </h1>
                 </div>
             </div>

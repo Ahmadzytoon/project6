@@ -28,7 +28,7 @@
      <style>
         .hero-header{
             background: linear-gradient(to bottom,#00336d,#00336d00,#ffffff9d ,#ffffff)  , url(/images/showMyReserv1.jpg) !important;
-     background-position: center center !important;
+     /* background-position: center center !important; */
      background-repeat: no-repeat !important;
      background-size: cover !important;
         }

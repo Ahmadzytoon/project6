@@ -24,7 +24,10 @@
 			<div class="row justify-content-center">
 				<div class="col-md-7 col-lg-5">
 					<div class="wrap border border-primary">
-						<a href="{{route('user.index')}}" class="logo d-flex justify-content-center fw-5 mt-5 "  style="color: black !important; font-size=10rem !important;"><h1  class="border border-primary rounded-pill p-2" style="color: #04448C !important;font-size=10rem !important;">Joy<span style="color: #FFC11A !important;">Water</span></h1></a>
+						<a href="{{route('user.index')}}" class="logo d-flex justify-content-center fw-5 mt-5 " ><h1  class="p-2" style="font-size:2.5rem !important;color: #04448C ; ; padding-left:.9rem; padding-right:.7rem;"><span style="color: #ffffff ;background-color:#04448C;border-radius: .5rem; padding-left:.3rem; padding-right:.3rem;padding-bottom:.3rem;">Joy</span><span style="color: #FFC11A !important;">Water</span></h1></a>
+
+
+						
 						{{-- <div class="img" style="background-image: url(/loginn/images/bg-1.jpg);"></div> --}}
 						<div class="login-wrap p-4 p-md-5">
 			      	<div class="d-flex">

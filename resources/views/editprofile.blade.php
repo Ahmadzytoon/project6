@@ -7,9 +7,9 @@
 <style>
     .hero-header{
 background: linear-gradient(to bottom,#00336d,#00336d00,#ffffff9d ,#ffffff)  , url(/images/showMyReserv1.jpg);
-background-position: center center;
-background-repeat: no-repeat;
-background-size: cover;
+/* background-position: center center !important; */
+background-repeat: no-repeat !important;
+     background-size: cover !important;
    }
 
    .bg-dark{
