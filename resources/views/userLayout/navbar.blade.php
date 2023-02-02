@@ -2,7 +2,7 @@
 
     <div id="menu-bar" class="fas fa-bars"></div>
 
-    <a href="#" class="logo"><span style="color: #04448C ; background-color:aliceblue;border-radius: .5rem; padding-left:.9rem; padding-right:.7rem;">Joy</span><span style="color: #FFC11A !important;"> Water</span></a>
+    <a href="{{route('user.index')}}" class="logo"><span style="color: #04448C ; background-color:aliceblue;border-radius: .5rem; padding-left:.9rem; padding-right:.7rem;">Joy</span><span style="color: #FFC11A !important;"> Water</span></a>
 
     <nav class="navbar">
         <a class="me-5" href="{{route('user.index')}}">home</a>

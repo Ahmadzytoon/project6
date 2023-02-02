@@ -24,6 +24,8 @@
 <!-- Template Stylesheet -->
 <link href="/UserSide/cssAbout/style.css" rel="stylesheet">
 <link href="/UserSide/csscontact/contact.css" rel="stylesheet">
+<link rel="stylesheet" href="/UserSide/mainstyle.css">
+
 <script src="https://kit.fontawesome.com/ccf160e1e6.js" crossorigin="anonymous"></script>
 <style>
    .hero-header{
