@@ -4,7 +4,14 @@
 @endsection
 @section('css')
 <link href="img/favicon.ico" rel="icon">       
-
+<!-- Google Web Fonts -->
+<!-- Google Web Fonts -->
+<!-- Google Web Fonts -->
+<!-- Google Web Fonts -->
+<!-- Google Web Fonts -->
+<!-- Google Web Fonts -->
+<!-- Google Web Fonts -->
+{{-- test work --}}
 <!-- Google Web Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
